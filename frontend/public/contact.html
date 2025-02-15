@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>CRAX-HOME</title>
+        <script src="craxcart.js"></script>
+        <link rel="stylesheet" href="contact.css">
+        <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">
+                <img src="./logo1.png" alt="Logo" className="logo" />
+            </a>
+
+            {/* ✅ Hamburger Icon */}
+
+            {/* 🔍 Search Bar */}
+            <input 
+                type="text" 
+                class="search" 
+                placeholder="Search for shows/shortfilms" 
+                value={searchQuery}
+            />
+
+            {/* ✅ Navigation List */}
+            <ul class='navlist'>
+                <li className="list"><a href="#">HOME</a></li>
+                <li className="list"><a href="#">ABOUT</a></li>
+                <li className="list"><a href="#">CONTACT</a></li>
+                <li className="list"><a href="/movies">BOOK TICKETS</a></li>
+                <div 
+                className={`hamburger ${menuActive ? 'active' : ''}`} 
+                onClick={toggleMenu}
+            >
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+            </div>
+            </ul>
+        </header>
+        <div class="right">
+            <a href="https://mail.google.com/mail/u/0/#inbox">MAIL US</a>
+            <a href="https://www.instagram.com/_shankar_peram?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">INSTAGRAM</a>
+            <a href="#">FACEBOOK</a>
+        </div>
+        <button type="button" id="start-button" class="startbtn"><img src="vyra4.png"></button>
+<div class="container">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">billing address</h3>
+
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" placeholder="john deo">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" placeholder="house.no - area - street">
+                </div>
+                <div class="inputBox">
+                    <span>city :</span>
+                    <input type="text" placeholder="mumbai">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input type="text" placeholder="india">
+                    </div>
+                    <div class="inputBox">
+                        <span>pin code :</span>
+                        <input type="text" placeholder="123 456">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">save card</h3>
+
+               
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" placeholder="deepesh reddy">
+                </div>
+                <div class="inputBox">
+                    <span>credit card number :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" placeholder="january">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="123" maxlength="3">
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <input type="submit" value="SAVE INFORMATION" class="submit-btn">
+
+    </form>
+
+</div>    
+<script src="chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+:root{
+    --color: linear-gradient(0deg , transparent , rgb(184,184,184,.2))
+}
+/* Scoped styles for Seats.js */
+.seats-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1f2025;
+    height: 100vh; /* Ensure full height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Container for seats */
+.seats-container {
+    background: #1f2025;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Ensure other pages are NOT affected */
+body {
+    
+    overflow: hidden !important;
+    width: 100%;
+    background: url('/public/imim2.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+/* Container for seats */
+.seats-container {
+    background: #1f2025;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Styling for the screen label */
+/* .screen {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Space between screen and seats */
+    /* text-align: center;
+    width: 100%; /* Ensure it stretches across */
+    /* max-width: 1200px; Limit width for large screens */ 
+/* } */
+
+/* .screen span {
+    font-size: 18px;
+    font-weight: bold;
+}  */
+.screen{
+    position: relative;
+    width:1000px;
+    border-top: 3px solid #fd6565;
+    margin-top: -20px;
+    border-radius: 60%;
+    overflow: hidden;
+    box-shadow: inset 0px 10px 20px var(--color) ;
+
+}
+
+.screen p{
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:20px;
+    margin-top: 10px;
+    margin-right: 300px;
+    color:cadetblue;
+    letter-spacing: 5px;
+}
+.screen::before{
+    content: '';
+    position: absolute;
+    width:1000px;
+    height:20px;
+    border-radius: 40%;
+    box-shadow: 0px 0px 20px rgb(184,184,184,1);
+    top:-20px;
+    left: 0;
+}
+/* Seat grid styles */
+.grid-container {
+    display: flex;
+    gap: 120px; /* 50px gap between boxes */
+    justify-content: center;
+    width: 100%;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 4 columns */
+    grid-template-rows: repeat(11, 1fr); /* 10 rows */
+    gap: 10px; /* Gap between seats */
+    max-width: 600px;
+}
+
+/* Seat styles */
+button.seat {
+    display:flex;
+    width: 25px;
+    height: 20px;
+    background:transparent;
+    color:#ccc;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding-left: 10px;
+    font-size: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* transition: background-color 0.3s; */
+    transition: .3s linear;
+}
+
+button.seat.selected {
+    background-color:brown ;
+    color: black;
+}
+
+button.seat.booked {
+    background-color: grey;
+    border:1px solid grey;
+    color:#ccc;
+    cursor: not-allowed;
+}
+/* button.seat.blocked {
+    background-color:cadetblue;
+    border: 1px solid grey;
+    color: #333;
+    cursor: not-allowed;
+} */
+.seat.permanently-blocked {  
+    background-color:cadetblue;
+    border: 1px solid grey;
+    color: #333;
+    cursor: not-allowed;
+}
+.seat.blocked{
+    background-color: grey;
+    border:1px solid grey;
+    color:#ccc;
+    cursor: not-allowed;
+}
+
+button.seat:hover {
+    background-color:brown;
+}
+
+.proceed-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: brown;
+    border: none;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 70%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: background-color 0.3s;
+    letter-spacing: .8px;
+}
+
+.proceed-btn:disabled {
+    background-color: #1f2025;
+    border:1px solid grey;
+    cursor: not-allowed;
+}
+.proceed-btn:disabled:hover {
+    background-color: #1f2025;
+    border:1px solid grey;
+    cursor: not-allowed;
+    color:white;
+}
+
+.proceed-btn:hover {
+    background-color: brown;
+    color:black;
+    text-decoration:underline;
+}
+.prior{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.prior .available{
+    border-radius: 40px;
+    width:25px;
+    height:20px;
+    background: #1f2025;
+    border:1px solid #ccc;
+    color:grey;
+}
+.prior .selected{
+    border-radius: 40px;
+    width:25px;
+    height:20px;
+    background: brown;
+    border:1px solid #ccc;
+    color:black;
+}
+.prior .booked{
+    border-radius: 60px;
+    width:25px;
+    height:20px;
+    background: grey;
+    border:1px solid grey;
+    color:grey;
+}
+.prior h4{
+    left: 50%;
+}
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width:600px) {
+    body {
+        transform: scale(1.6); /* Zoom in by 120% */
+        transform-origin: top left; /* Set the zoom origin to the top-left corner */
+        width:100%; /* Ensure it spans the full width */
+        background: url(/public/imim2.png);
+        background-size: 1050%;
+        background-position: center;
+    }
+    
+    .seats-page {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #1f2025;
+        height: 100vh; /* Ensure full height */
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+    .seats-container {
+        background: #1f2025;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        padding: 20px;
+        margin-left: 600px;
+    }
+    .screen p{
+        margin-left:320px;
+        font-size: 30px;
+        margin-top: 20px;
+        letter-spacing: 30px;
+    }
+    button.seat {
+        display: flex;
+        justify-content: center; /* Centers text horizontally */
+        align-items: center; /* Centers text vertically */
+        width: 25px;
+        height: 20px;
+        background: transparent;
+        color: #ccc;
+        font-weight: bold;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        font-size: 10px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        transition: 0.3s linear;
+        padding-left: 0; /* Remove left padding */
+    }
+    .seat-preview {
+        position: fixed;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.9);
+        color: black;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        text-align: center;
+        z-index: 1000;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        display: block;
+    }
+    
+    
+}

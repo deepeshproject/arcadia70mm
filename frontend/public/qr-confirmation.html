@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        #qrCode { width: 300px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h2>🎉 Booking Confirmed!</h2>
+    <p>Scan the QR code below to view your booking details:</p>
+    <img id="qrCode" alt="QR Code">
+    <br>
+    <button onclick="window.location.href='index.html'">Go to Home</button>
+
+    <script>
+        const qrCode = sessionStorage.getItem('qrCode');
+        if (qrCode) {
+            document.getElementById('qrCode').src = qrCode;
+        } else {
+            document.body.innerHTML = "<h3>❌ QR Code not found. Please check your booking.</h3>";
+        }
+    </script>
+</body>
+</html>

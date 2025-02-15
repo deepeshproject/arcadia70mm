@@ -1,0 +1,74 @@
+body{
+    box-sizing: border-box;
+}
+.contact-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid black;
+    backdrop-filter: blur(10px); 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: transparent;
+  }
+  .issue{
+    background: transparent;
+  }
+  .issue::placeholder{
+    color:black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  h6{
+font-size: 14px;
+text-decoration: overline;
+font-weight: lighter;
+  }
+  .contact-container h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .gogo:hover{
+    text-decoration: underline;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    border-bottom: 4px solid grey;
+    border-left: 4px solid grey;
+  }
+  
+  .contact-form textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    background:#654321;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background: transparent;
+    text-decoration: underline;
+  }
+  
