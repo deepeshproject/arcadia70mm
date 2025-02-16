@@ -14,14 +14,17 @@ const Payment = () => {
     const selectedSeats = location.state?.selectedSeats || [];
     const selectedMovie = location.state?.selectedMovie || "";
 
+    // Handle Razorpay payment
     const handlePayment = async () => {
         try {
+            // Request to create Razorpay order
             const response = await axios.post("https://arcadia70mm.onrender.com/api/payment/order", {
-                amount: selectedSeats.length * 60,
+                amount: selectedSeats.length * 60, // Calculating amount based on selected seats
             });
 
             const order = response.data;
 
+            // Razorpay payment options
             const options = {
                 key: process.env.REACT_APP_RAZORPAY_KEY_ID,
                 amount: order.amount,
@@ -33,6 +36,7 @@ const Payment = () => {
                     console.log("✅ Payment successful:", paymentResponse);
 
                     try {
+                        // Send booking details to the backend after successful payment
                         const bookingData = {
                             name,
                             phone,
