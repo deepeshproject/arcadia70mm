@@ -42,7 +42,7 @@ const Home = () => {
 
                 {/* ✅ Navigation List */}
                 <ul className={`navlist ${menuActive ? 'active' : ''}`}>
-                    <li className="list"><a href="/">HOME</a></li>
+                    <li className="list"><a href="/">HOMEabba</a></li>
                     <li className="list"><a href="/short">ABOUT</a></li>
                     <li className="list"><a href="/contact">CONTACT</a></li>
                     <li className="list"><a href="/movies">BOOK TICKETS</a></li>
