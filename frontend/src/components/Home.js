@@ -42,7 +42,7 @@ const Home = () => {
 
                 {/* ✅ Navigation List */}
                 <ul className={`navlist ${menuActive ? 'active' : ''}`}>
-                    <li className="list"><a href="/">HOMEabba</a></li>
+                    <li className="list"><a href="/">HOME</a></li>
                     <li className="list"><a href="/short">ABOUT</a></li>
                     <li className="list"><a href="/contact">CONTACT</a></li>
                     <li className="list"><a href="/movies">BOOK TICKETS</a></li>
@@ -63,7 +63,7 @@ const Home = () => {
                         <article className="card__article2">
                             <img src="./booknow.jpeg" alt="" className="card__img2" />
                             <div className="card__data2">
-                                <h2 className="card__title2">Book Tickets</h2>
+                                <h2 className="card__title2">Book Tickets Right now</h2>
                                 <span className="card__description2">🎬 Lights. Camera. Action! Experience Movies Like Never Before on the Grand 70mm Screen!</span>
                                 <a href="/movies" className="card__button2"><br />BOOK NOW</a>
                             </div>
