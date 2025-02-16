@@ -92,7 +92,7 @@ const MovieSelect = () => {
                         <h4 className="times">{index === 0 ? "10 am - 11:30 am" : index === 1 ? "12 pm - 1:30 pm" : "2 pm - 3:30 pm"}</h4>
                         <img
                             src={
-                                index === 0 ? "amshow.png" :
+                                index === 0 ? "am.jpeg" :
                                 index === 1 ? "noonshow.jpeg" :
                                 "pmshow.jpeg"
                             }

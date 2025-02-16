@@ -24,7 +24,8 @@ img {
 }
 .logo{
     width:20%;
-    margin-right: 100px;;
+    margin-right: 80px;
+    left:60%;
 }
 .header2{
     position:fixed;
@@ -425,6 +426,11 @@ h7{
         text-align: center;
         border: 1px solid black;
     }
+    .logo{
+        width:40%;
+        margin-right: 80px;
+        left:60%;
+    }
     .hamburger{
         display: block;
     }
@@ -641,10 +647,33 @@ h7{
         background-color: #152f5d;
         transition: all 0.2s ease-in-out;
     }
+    .times{
+        margin-left: 100px;
+        font-weight: 1000;
+        font-size: 15px;
+        color:maroon;
+    }
+    .shows{
+        font-size: 20px;
+        margin-left:-140px;
+        margin-bottom:-20px;
+    }
+    .am-show-image {
+        border: 2px solid yellow;
+        border-radius: 10px;
+    }
+    
+    .mid-show-image {
+        border: 2px solid blue;
+    }
+    
+    .pm-show-image {
+        border: 2px solid green;
+    }
         h5{
             position: absolute;
             top:230px;
-            right:22%;
+            right:24%;
             font-size: 30px;
             color: #654321;
             border-top: 2px solid rgb(245, 147, 0);
