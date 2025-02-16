@@ -91,23 +91,6 @@ h2{
 }
 @media screen and (max-width:600px)
 {
-    .circle {
-        width: 60px; /* Adjust width */
-        height: 30px; /* Half of the width for a semi-circle */
-        border-top-left-radius: 50px;  /* Curve on top left */
-        border-top-right-radius: 50px; /* Curve on top right */
-        border-bottom-left-radius: 0;  /* No curve at bottom */
-        border-bottom-right-radius: 0; /* No curve at bottom */
-        text-align: center;
-        font-size: 13px;
-        outline: none;
-        background-color: #1f2025;
-        position: relative;
-    right:42.5%;
-    position: relative;
-    bottom:-328px;
-    border-bottom: 0px;
-}
 .qr-card {
     background: rgba(255, 255, 255, 0.1); /* Transparent white for glass effect */
     padding: 20px;
@@ -165,7 +148,7 @@ h2 {
 }
 
 .pdf-download-button {
-    margin-top: 30px;
+    margin-top: 35px;
     padding: 10px;
     background-color: transparent;
     color: white;
