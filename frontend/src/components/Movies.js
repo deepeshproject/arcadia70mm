@@ -17,7 +17,7 @@ const MovieSelect = () => {
     useEffect(() => {
         const checkSeatAvailability = async () => {
             try {
-                const API_BASE_URL = process.env.REACT_APP_API_URL || "https://arcadia70mm.onrender.com";    
+                const API_BASE_URL = process.env.REACT_APP_API_URL || "https://arcadia70mm-9vle.onrender.com";    
 
                 const response1 = await axios.get(`${API_BASE_URL}/api/bookings/booked-seats/Am Show`);
                 const response2 = await axios.get(`${API_BASE_URL}/api/bookings/booked-seats/Mid Show`);

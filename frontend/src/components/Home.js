@@ -63,9 +63,9 @@ const Home = () => {
                         <article className="card__article2">
                             <img src="./booknow.jpeg" alt="" className="card__img2" />
                             <div className="card__data2">
-                                <h2 className="card__title2">Book Tickets Right now hahahaha</h2>
+                                <h2 className="card__title2">Book Tickets</h2>
                                 <span className="card__description2">🎬 Lights. Camera. Action! Experience Movies Like Never Before on the Grand 70mm Screen!</span>
-                                <a href="/movies" className="card__button2"><br />BOOK BHAYYA</a>
+                                <a href="/movies" className="card__button2"><br />BOOK NOW</a>
                             </div>
                         </article>
                         <article className="card__article">

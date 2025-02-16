@@ -17,7 +17,7 @@ const ContactForm = () => {
  const sendEmail = async (e) => {
   e.preventDefault();
   try {
-    const response = await axios.post("https://arcadia70mm.onrender.com/send-email", formData);
+    const response = await axios.post("https://arcadia70mm-9vle.onrender.com/send-email", formData);
     console.log("Email response:", response.data);  // Log the response from the backend
     alert(response.data.message);
     setFormData({ name: "", email: "", rollNumber: "", issue: "" });

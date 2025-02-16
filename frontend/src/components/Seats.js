@@ -17,7 +17,7 @@ const SeatSelection = () => {
             try {
                 if (!selectedMovie) return;
     
-                const response = await axios.get(`https://arcadia70mm.onrender.com/api/bookings/booked-seats/${selectedMovie}`);
+                const response = await axios.get(`https://arcadia70mm-9vle.onrender.com/api/bookings/booked-seats/${selectedMovie}`);
                 
                 if (response.data) {
                     setBookedSeats(response.data.bookedSeats);
@@ -51,7 +51,7 @@ const SeatSelection = () => {
         }
     
         try {
-            await axios.post('https://arcadia70mm.onrender.com/api/bookings/block-seats', { 
+            await axios.post('https://arcadia70mm-9vle.onrender.com/api/bookings/block-seats', { 
                 movie: selectedMovie,
                 seats: selectedSeats,
             });

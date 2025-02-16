@@ -20,7 +20,7 @@ const Payment = () => {
         try {
             console.log("🔑 Using Razorpay Key:", process.env.REACT_APP_RAZORPAY_KEY_ID);
             
-            const response = await axios.post("https://arcadia70mm.onrender.com/api/payment/order", {
+            const response = await axios.post("https://arcadia70mm-9vle.onrender.com/api/payment/order", {
                 amount: selectedSeats.length * 60,
             });
 
@@ -47,7 +47,7 @@ const Payment = () => {
                             paymentId: paymentResponse.razorpay_payment_id,
                         };
 
-                        const bookingResponse = await axios.post("https://arcadia70mm.onrender.com/api/bookings", bookingData);
+                        const bookingResponse = await axios.post("https://arcadia70mm-9vle.onrender.com/api/bookings", bookingData);
 
                         if (bookingResponse.data.success) {
                             const bookingUrl = `/qr-confirmation?seats=${selectedSeats.join(",")}&name=${encodeURIComponent(name)}&phone=${phone}&show=${selectedMovie}`;
