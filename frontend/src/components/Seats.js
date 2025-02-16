@@ -23,7 +23,7 @@ const SeatSelection = () => {
             try {
                 if (!selectedMovie) return;
     
-                const response = await axios.get(`http://localhost:5000/api/bookings/booked-seats/${selectedMovie}`);
+                const response = await axios.get(`https://arcadia70mm.onrender.com/api/bookings/booked-seats/${selectedMovie}`);
                 
                 if (response.data) {
                     setBookedSeats(response.data.bookedSeats);
