@@ -412,6 +412,7 @@ h5{
         height: auto; /* Allow the body to extend beyond the viewport */
         min-height: 100%; /* Ensure it stretches to at least the viewport height */
         overflow-y: auto; /* Enable vertical scrolling */
+        width:100%;
     }
 
     .home {
@@ -424,7 +425,6 @@ h5{
     /* Adjust the grid layout for smaller screens */
     .card__container{
         width:130%;
-        max-width:100%;
         height:auto;
         display: grid;
         grid-template-columns: 1fr;
