@@ -559,6 +559,15 @@ app.get("/movies", (req, res) => {
   res.send("Movies data here");
 });
 
+const path = require("path");
+
+// Serve static frontend files
+app.use(express.static(path.join(__dirname, "frontend/build"))); 
+
+// Handle React frontend routes (for refreshing on a specific page)
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "frontend/build", "index.html"));
+});
 
 
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
