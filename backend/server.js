@@ -555,9 +555,6 @@ const PORT = process.env.PORT || 8080; // Removed hardcoded 5000
 app.get("/", (req, res) => {
   res.send("Backend is running!");
 });
-app.get("/movies", (req, res) => {
-  res.send("Movies data here");
-});
 
 const path = require("path");
 
