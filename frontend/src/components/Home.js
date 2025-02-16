@@ -22,6 +22,7 @@ const Home = () => {
     };
 
     return (
+        
         <div>
             <header>
                 <a href="/" className="logo">
