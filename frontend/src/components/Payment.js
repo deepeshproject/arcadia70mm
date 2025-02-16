@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation, useNavigate} from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./payment.css";
 
@@ -16,7 +16,7 @@ const Payment = () => {
 
     const handlePayment = async () => {
         try {
-            const response = await axios.post("http://localhost:5000/api/payment/order", {
+            const response = await axios.post("https://arcadia70mm.onrender.com/api/payment/order", {
                 amount: selectedSeats.length * 60,
             });
 
@@ -43,7 +43,7 @@ const Payment = () => {
                             paymentId: paymentResponse.razorpay_payment_id,
                         };
 
-                        const bookingResponse = await axios.post("http://localhost:5000/api/bookings", bookingData);
+                        const bookingResponse = await axios.post("https://arcadia70mm.onrender.com/api/bookings", bookingData);
 
                         if (bookingResponse.data.success) {
                             // Open the QR confirmation page in a new tab
