@@ -17,9 +17,11 @@ const MovieSelect = () => {
     useEffect(() => {
         const checkSeatAvailability = async () => {
             try {
-                const response1 = await axios.get("http://localhost:5000/api/bookings/booked-seats/Am Show");
-                const response2 = await axios.get("http://localhost:5000/api/bookings/booked-seats/Mid Show");
-                const response3 = await axios.get("http://localhost:5000/api/bookings/booked-seats/Pm Show");
+                const API_BASE_URL = "https://arcadia70mm.onrender.com";
+
+                const response1 = await axios.get(`${API_BASE_URL}/api/bookings/booked-seats/Am Show`);
+                const response2 = await axios.get(`${API_BASE_URL}/api/bookings/booked-seats/Mid Show`);
+                const response3 = await axios.get(`${API_BASE_URL}/api/bookings/booked-seats/Pm Show`);
 
                 setMovieStatus({
                     "Am Show": response1.data.isFullyBooked,
@@ -88,7 +90,6 @@ const MovieSelect = () => {
                     <div key={show} className={`item ${currentMovieIndex === index ? "show" : ""}`}>
                         <h1 className="shows">{show} <br /> </h1>
                         <h4 className="times">{index === 0 ? "10 am - 11:30 am" : index === 1 ? "12 pm - 1:30 pm" : "2 pm - 3:30 pm"}</h4>
-                        {/* ✅ Assigned unique class names to each image */}
                         <img
                             src={
                                 index === 0 ? "amshow.png" :
