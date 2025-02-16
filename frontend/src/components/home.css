@@ -413,6 +413,8 @@ h5{
         min-height: 100%; /* Ensure it stretches to at least the viewport height */
         overflow-y: auto; /* Enable vertical scrolling */
         width:100%;
+        align-items: center;
+        justify-content: center;
     }
 
     .home {
@@ -420,6 +422,8 @@ h5{
         background: url(/public/imim2.png) no-repeat;
         background-size: cover;
         background-position: center;
+        align-items: center;
+        justify-content: center;
     }
 
     /* Adjust the grid layout for smaller screens */
