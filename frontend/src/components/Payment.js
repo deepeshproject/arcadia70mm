@@ -14,17 +14,18 @@ const Payment = () => {
     const selectedSeats = location.state?.selectedSeats || [];
     const selectedMovie = location.state?.selectedMovie || "";
 
-    // Handle Razorpay payment
+    console.log("📌 Payment Page Loaded with:", selectedSeats, selectedMovie);
+
     const handlePayment = async () => {
         try {
-            // Request to create Razorpay order
+            console.log("🔑 Using Razorpay Key:", process.env.REACT_APP_RAZORPAY_KEY_ID);
+            
             const response = await axios.post("https://arcadia70mm.onrender.com/api/payment/order", {
-                amount: selectedSeats.length * 60, // Calculating amount based on selected seats
+                amount: selectedSeats.length * 60,
             });
 
             const order = response.data;
 
-            // Razorpay payment options
             const options = {
                 key: process.env.REACT_APP_RAZORPAY_KEY_ID,
                 amount: order.amount,
@@ -33,10 +34,9 @@ const Payment = () => {
                 name: "Movie Ticket Booking",
                 description: `Booking for ${selectedMovie}`,
                 handler: async function (paymentResponse) {
-                    console.log("✅ Payment successful:", paymentResponse);
+                    console.log("✅ Payment Successful:", paymentResponse);
 
                     try {
-                        // Send booking details to the backend after successful payment
                         const bookingData = {
                             name,
                             phone,
@@ -50,7 +50,6 @@ const Payment = () => {
                         const bookingResponse = await axios.post("https://arcadia70mm.onrender.com/api/bookings", bookingData);
 
                         if (bookingResponse.data.success) {
-                            // Open the QR confirmation page in a new tab
                             const bookingUrl = `/qr-confirmation?seats=${selectedSeats.join(",")}&name=${encodeURIComponent(name)}&phone=${phone}&show=${selectedMovie}`;
                             window.open(bookingUrl, "_blank");
                             navigate("/");
@@ -66,7 +65,7 @@ const Payment = () => {
                 theme: { color: "#F37254" },
                 modal: {
                     ondismiss: function () {
-                        alert("Payment failed or cancelled");
+                        alert("❌ Payment failed or cancelled");
                     },
                 },
             };
@@ -89,36 +88,10 @@ const Payment = () => {
                     handlePayment();
                 }}
             >
-                <input
-                    type="text"
-                    placeholder="Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                />
-                <input
-                    type="text"
-                    placeholder="Phone Number"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    maxLength={10}
-                    minLength={10}
-                    required
-                />
-                <input
-                    type="text"
-                    placeholder="Roll Number"
-                    value={roll}
-                    onChange={(e) => setRoll(e.target.value)}
-                    required
-                />
-                <input
-                    type="number"
-                    placeholder="Year"
-                    value={year}
-                    onChange={(e) => setYear(e.target.value)}
-                    required
-                />
+                <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
+                <input type="text" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} maxLength={10} minLength={10} required />
+                <input type="text" placeholder="Roll Number" value={roll} onChange={(e) => setRoll(e.target.value)} required />
+                <input type="number" placeholder="Year" value={year} onChange={(e) => setYear(e.target.value)} required />
                 <button type="submit">Pay Now</button>
             </form>
         </div>
