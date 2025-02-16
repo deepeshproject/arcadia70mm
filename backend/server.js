@@ -27,13 +27,15 @@ const razorpay = new Razorpay({
 });
 
 // ✅ Setup Nodemailer for issue reporting
+
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service: "gmail", // If using Gmail
   auth: {
-    user: process.env.EMAIL,
-    pass: process.env.PASSWORD,
+    user: process.env.EMAIL, // Your email address
+    pass: process.env.PASSWORD, // Your email password or app-specific password if 2FA is enabled
   },
 });
+
 
 // 📩 **Issue Reporting via Email**
 app.post("/send-email", async (req, res) => {
