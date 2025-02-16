@@ -14,17 +14,19 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
+ const sendEmail = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await axios.post("https://arcadia70mm.onrender.com/send-email", formData);
+    console.log("Email response:", response.data);  // Log the response from the backend
+    alert(response.data.message);
+    setFormData({ name: "", email: "", rollNumber: "", issue: "" });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    alert("Failed to send email. Try again later.");
+  }
+};
 
-    try {
-      const response = await axios.post("https://arcadia70mm.onrender.com/send-email", formData);
-      alert(response.data.message);
-      setFormData({ name: "", email: "", rollNumber: "", issue: "" });
-    } catch (error) {
-      alert("Failed to send email. Try again later.");
-    }
-  };
 
   return (
     <div className="contact-container">
