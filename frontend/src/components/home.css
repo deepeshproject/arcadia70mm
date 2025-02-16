@@ -409,7 +409,7 @@ h5{
 @media screen and (max-width: 600px) {
     /* Ensure the body and html allow scrolling */
     html, body {
-        height: auto; /* Allow the body to extend beyond the viewport */
+        height: 100%; /* Allow the body to extend beyond the viewport */
         min-height: 100%; /* Ensure it stretches to at least the viewport height */
         overflow-y: auto; /* Enable vertical scrolling */
         width:auto;
@@ -424,7 +424,6 @@ h5{
         background-position: center;
         align-items: center;
         justify-content: center;
-        width:70%;
     }
 
     /* Adjust the grid layout for smaller screens */
