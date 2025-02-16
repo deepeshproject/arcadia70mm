@@ -65,7 +65,7 @@ const Home = () => {
                             <div className="card__data2">
                                 <h2 className="card__title2">Book Tickets</h2>
                                 <span className="card__description2">🎬 Lights. Camera. Action! Experience Movies Like Never Before on the Grand 70mm Screen!</span>
-                                <a href="/movies" className="card__button2"><br />BOOK NOW</a>
+                                <a href="/movies" className="card__button2"><br />BOOK NOW BEY</a>
                             </div>
                         </article>
                         <article className="card__article">
