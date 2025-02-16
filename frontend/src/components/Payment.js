@@ -51,8 +51,7 @@ const Payment = () => {
 
                         if (bookingResponse.data.success) {
                             const bookingUrl = `/qr-confirmation?seats=${selectedSeats.join(",")}&name=${encodeURIComponent(name)}&phone=${phone}&show=${selectedMovie}`;
-                            window.open(bookingUrl, "_blank");
-                            navigate("/");
+                            navigate(bookingUrl);
                         } else {
                             alert("❌ Booking failed. Please try again.");
                         }
