@@ -91,13 +91,13 @@ h2{
     border: 1px solid black;
     backdrop-filter: blur(10px); /* Frosted glass effect */
    margin-top:25px;
-   margin-right:70px;
+   margin-right:15px;
     border-bottom: 0px;
 }
 h2 {
     position: relative; /* Change from absolute to relative */
-    top: -370px;  /* Reset positioning */
-    left: 165px; /* Reset positioning */
+    top: -350px;  /* Reset positioning */
+    left: 115px; /* Reset positioning */
     color: #ccc;
     font-size: 30px; /* Increase font size if needed */
     text-align: center; /* Ensure it's centered */
