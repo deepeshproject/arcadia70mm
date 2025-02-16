@@ -40,13 +40,24 @@ const transporter = nodemailer.createTransport({
 // 📩 **Issue Reporting via Email**
 app.post("/send-email", async (req, res) => {
   const { name, email, rollNumber, issue } = req.body;
+  console.log("Request received:", req.body);  // Add this line
 
   const mailOptions = {
     from: process.env.EMAIL,
-    to: process.env.EMAIL, // Send issue reports to your own email
+    to: process.env.EMAIL, // Your email where you'll receive reports
     subject: "New Issue Reported",
     text: `Name: ${name}\nEmail: ${email}\nRoll Number: ${rollNumber}\nIssue: ${issue}`,
   };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.json({ success: true, message: "Email sent successfully!" });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).json({ success: false, message: "Error sending email" });
+  }
+});
+
 
   try {
     await transporter.sendMail(mailOptions);
