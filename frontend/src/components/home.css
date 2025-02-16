@@ -423,7 +423,8 @@ h5{
 
     /* Adjust the grid layout for smaller screens */
     .card__container{
-        width:100%;
+        width:130%;
+        max-width:100%;
         height:auto;
         display: grid;
         grid-template-columns: 1fr;
