@@ -653,11 +653,13 @@ h7{
         font-size: 15px;
         margin-top: 7.5px;
         color:maroon;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     .shows{
         font-size: 15px;
         margin-left:-170px;
         margin-bottom:-25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     .am-show-image {
         border:none;
