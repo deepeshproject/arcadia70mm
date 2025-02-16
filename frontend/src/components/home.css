@@ -8,7 +8,7 @@
 }
 body{
     width:100%;
-    height:100vh;
+    height:100dvh;
     /* background: url('/public/bud2.png') no-repeat center center fixed;  */
     /* background-color: gold; */
     background-position: center;
@@ -102,7 +102,7 @@ section{
 }
 .home{
     width:100%;
-    height:100vh;
+    height:100dvh;
     display:grid;
     grid-template-columns: repeat(1, 1fr);
     background-position: center;
@@ -419,7 +419,7 @@ h5{
     
 
     .home {
-        min-height: 155vh; /* Adjust the height of the section */
+        min-height: 155dvh; /* Adjust the height of the section */
         background: url(/public/imim2.png) no-repeat;
         background-size: cover;
         background-position: center;
