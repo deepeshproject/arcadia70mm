@@ -424,6 +424,7 @@ h5{
         background-position: center;
         align-items: center;
         justify-content: center;
+        width:70%;
     }
 
     /* Adjust the grid layout for smaller screens */
