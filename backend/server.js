@@ -552,4 +552,8 @@ app.use("/api/bookings", bookingRoutes);
 
 // 🚀 **Start the Server**
 const PORT = process.env.PORT || 8080; // Removed hardcoded 5000
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
