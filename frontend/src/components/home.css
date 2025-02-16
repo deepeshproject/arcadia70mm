@@ -412,7 +412,7 @@ h5{
         height: auto; /* Allow the body to extend beyond the viewport */
         min-height: 100%; /* Ensure it stretches to at least the viewport height */
         overflow-y: auto; /* Enable vertical scrolling */
-        width:70%;
+        width:auto;
         align-items: center;
         justify-content: center;
     }
