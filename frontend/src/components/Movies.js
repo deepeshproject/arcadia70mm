@@ -86,10 +86,9 @@ const MovieSelect = () => {
                     transform: `translateX(-${currentMovieIndex * (isMobile ? 33 : 25)}%)`,
                 }}
             >
+                
                 {["Am Show", "Mid Show", "Pm Show"].map((show, index) => (
-                    <div key={show} className={`item ${currentMovieIndex === index ? "show" : ""}`}>
-                        <h1 className="shows">{show} <br /> </h1>
-                        <h4 className="times">{index === 0 ? "10 am - 11:30 am" : index === 1 ? "12 pm - 1:30 pm" : "2 pm - 3:30 pm"}</h4>
+                    <div key={show} className={`item ${currentMovieIndex === index ? "show" : ""}`}>                        
                         <img
                             src={
                                 index === 0 ? "am.jpeg" :
@@ -99,6 +98,7 @@ const MovieSelect = () => {
                             alt={show}
                             className={`movie-image ${index === 0 ? "am-show-image" : index === 1 ? "mid-show-image" : "pm-show-image"}`}
                         />
+                        
                         <button
                             className={`movie-btn ${movieStatus[show] ? "disabled" : ""}`}
                             onClick={() => handleBuyNowClick(show)}
@@ -106,6 +106,8 @@ const MovieSelect = () => {
                         >
                             <h6>BOOK NOW</h6>
                         </button>
+                        <h1 className="shows">{show} <br /> </h1>
+                        <h4 className="times">{index === 0 ? "10 am - 11:30 am" : index === 1 ? "12 pm - 1:30 pm" : "2 pm - 3:30 pm"}</h4>
                     </div>
                 ))}
             </div>

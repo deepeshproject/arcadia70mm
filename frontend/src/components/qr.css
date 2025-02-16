@@ -73,40 +73,9 @@ h2{
 .pdf-download-button:hover {
     background-color:transparent;
 }
-.circle {
-        width: 40px; /* Adjust width */
-        height: 10px; /* Half of the width for a semi-circle */
-        border-top-left-radius: 50px;  /* Curve on top left */
-        border-top-right-radius: 50px; /* Curve on top right */
-        border-bottom-left-radius: 0;  /* No curve at bottom */
-        border-bottom-right-radius: 0; /* No curve at bottom */
-        text-align: center;
-        font-size: 13px;
-        outline: none;
-        background-color: #1f2025;
-        position: relative;
-    right:13.5%;
-    bottom:-253px;
-    border-bottom: 0px;
-}
-@media screen and (max-width:600px)
+
+@media screen and (max-width:640px)
 {
-    .circle {
-        width: 40px; /* Adjust width */
-        height: 10px; /* Half of the width for a semi-circle */
-        border-top-left-radius: 50px;  /* Curve on top left */
-        border-top-right-radius: 50px; /* Curve on top right */
-        border-bottom-left-radius: 0;  /* No curve at bottom */
-        border-bottom-right-radius: 0; /* No curve at bottom */
-        text-align: center;
-        font-size: 13px;
-        outline: none;
-        background-color: #1f2025;
-        position: relative;
-    right:44.5%;
-    bottom:-327px;
-    border-bottom: 0px;
-}
 .qr-card {
     background: rgba(255, 255, 255, 0.1); /* Transparent white for glass effect */
     padding: 20px;
@@ -122,15 +91,15 @@ h2{
     border: 1px solid black;
     backdrop-filter: blur(10px); /* Frosted glass effect */
    margin-top:25px;
-   margin-right:-25px;
+   margin-right:70px;
     border-bottom: 0px;
 }
 h2 {
     position: relative; /* Change from absolute to relative */
-    top: -350px;  /* Reset positioning */
-    left: 105px; /* Reset positioning */
+    top: -370px;  /* Reset positioning */
+    left: 165px; /* Reset positioning */
     color: #ccc;
-    font-size: 24px; /* Increase font size if needed */
+    font-size: 30px; /* Increase font size if needed */
     text-align: center; /* Ensure it's centered */
     width: 100%; /* Make sure it doesn't shrink */
     margin-bottom: 15px; /* Add spacing below */

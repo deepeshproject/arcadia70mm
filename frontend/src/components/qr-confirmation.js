@@ -76,10 +76,6 @@ buttons.forEach(button => (button.style.display = 'block'));
                     Download as PDF
                 </button>
             </div>
-            <input 
-            type="textbox"
-            className="circle"
-            />
         </div>
     );
 };

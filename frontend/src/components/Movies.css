@@ -648,27 +648,27 @@ h7{
         transition: all 0.2s ease-in-out;
     }
     .times{
-        margin-left: 100px;
+        margin-left: 75px;
         font-weight: 1000;
         font-size: 15px;
+        margin-top: 7.5px;
         color:maroon;
     }
     .shows{
         font-size: 15px;
-        margin-left:-140px;
-        margin-bottom:-20px;
+        margin-left:-170px;
+        margin-bottom:-25px;
     }
     .am-show-image {
-        border: 2px solid yellow;
-        border-radius: 10px;
+        border:none;
     }
     
     .mid-show-image {
-        border: 2px solid blue;
+        border: none;
     }
     
     .pm-show-image {
-        border: 2px solid green;
+        border: none;
     }
         h5{
             position: absolute;
