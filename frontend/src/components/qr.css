@@ -51,10 +51,15 @@ h2{
 
 .qr-info p {
     margin: 5px 0;
-    font-size: 16px;
-    color:white;
-    margin-left:80px;
+    font-size: 18px;
+    color:rgb(231, 53, 53);
+    margin-left: 75px;
     letter-spacing: 1px;
+    text-align: center;
+    width: 120px;
+    
+    
+    
 }
 
 .pdf-download-button {
@@ -127,7 +132,7 @@ h2 {
     margin: 8px 0;
     font-size: 30px;
     color:white;
-    margin-left:90px;
+    margin-left:200px;
     letter-spacing: 2px;
     line-height: 50px;
 }
