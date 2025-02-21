@@ -83,8 +83,10 @@ h2 {
 
 @media screen and (max-width: 640px) {
     .qr-card {
+        position: absolute;
         width: 90%;
         max-width: 350px;
+
     }
 
     h2 {

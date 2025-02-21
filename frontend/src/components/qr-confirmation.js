@@ -125,7 +125,7 @@ const QRConfirmation = () => {
         const pdf = new jsPDF({
             orientation: 'portrait', // Same as 'p'
             unit: 'mm', // Same as before
-            format: [80, 140] // Custom size: 80mm width, 140mm height
+            format: [80, 110] // Custom size: 80mm width, 140mm height
         });
         
 
