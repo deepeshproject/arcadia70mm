@@ -93,6 +93,7 @@ const Payment = () => {
                 <input type="number" placeholder="Year" value={year} onChange={(e) => setYear(e.target.value)} required />
                 <button type="submit">Pay Now</button>
             </form>
+            <h1>After the payment, Please wait till the ticket is generated...</h1>
         </div>
     );
 };
