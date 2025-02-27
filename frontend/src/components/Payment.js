@@ -90,7 +90,7 @@ const Payment = () => {
                 <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
                 <input type="text" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} maxLength={10} minLength={10} required />
                 <input type="text" placeholder="Roll Number" value={roll} onChange={(e) => setRoll(e.target.value)} required />
-                <input type="number" placeholder="Year" value={year} onChange={(e) => setYear(e.target.value)} required />
+                <input type="number" placeholder="Year of Study" value={year} onChange={(e) => setYear(e.target.value)} required />
                 <button type="submit">Pay Now</button>
             </form>
             <h1>After the payment, Please wait till the ticket is generated...</h1>
